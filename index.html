@@ -1,1 +1,231 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Find Your Seat</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap' rel='stylesheet'><style>body{margin:0;font-family:Montserrat;background:#fff7f5;padding:20px}.card{max-width:760px;margin:auto;background:#fff;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}h1{font-family:Great Vibes,cursive;color:#a94816;font-size:68px}input{width:70%;padding:14px;border-radius:14px;border:1px solid #ddd}button{padding:14px 22px;border:none;border-radius:14px;background:#a94816;color:#fff;font-weight:700}.item{text-align:left;background:#fff;border:1px solid #eee;border-radius:16px;padding:15px;margin-top:10px}</style></head><body><div class='card'><h1>Find Your Seat</h1><p>Type your name below.</p><input id='q' oninput='f()'><button onclick='f()'>Search</button><div id='r'></div></div><script>const g=[{"name": "Aaron Jay Morales", "table": "15"}, {"name": "Aaron John Fernandez", "table": "5"}, {"name": "Ace Candelaria", "table": "18"}, {"name": "Ady Mejino", "table": "7"}, {"name": "Agatha Uvero", "table": "6"}, {"name": "Aiko Morales", "table": "15"}, {"name": "Aileen Palma", "table": "3"}, {"name": "Alex Castro", "table": "6"}, {"name": "Allan Theo Hernandez", "table": "18"}, {"name": "Althea Jean Sultan", "table": "1"}, {"name": "Alyah Florendo", "table": "4"}, {"name": "Ana Patricia Bautista", "table": "11"}, {"name": "Andreah Despi", "table": "4"}, {"name": "Andrew James Despi", "table": "4"}, {"name": "Andrew Lagumbay", "table": "11"}, {"name": "Angela Fernandez", "table": "5"}, {"name": "Anne Margaret Layson", "table": "9"}, {"name": "Anne Vera Candelaria", "table": "2"}, {"name": "Arabella Denise Palma", "table": "3"}, {"name": "Armando  Israel", "table": "VIP A"}, {"name": "Arnel Alcoriza", "table": "VIP B"}, {"name": "Arnold Austria", "table": "17"}, {"name": "Ashton Uvero", "table": "6"}, {"name": "Badette Dasian", "table": "20"}, {"name": "Basil John Valencia", "table": "15"}, {"name": "Benjamin Fortus", "table": "18"}, {"name": "Bibim / Jaime Cortez", "table": "8"}, {"name": "Camille Espinar", "table": "2"}, {"name": "Camille Sy", "table": "16"}, {"name": "Carlos Arriero", "table": "19"}, {"name": "Cheryl Peralta", "table": "12"}, {"name": "Christopher John Faelmoca", "table": "9"}, {"name": "Cian Marcelo", "table": "18"}, {"name": "Claire Azcarraga", "table": "11"}, {"name": "Clarita Carillo", "table": "VIP B"}, {"name": "Cocoy Cortez", "table": "7"}, {"name": "Dan Michael Sy", "table": "16"}, {"name": "Danielle Chingcuangco", "table": "14"}, {"name": "Daryll Francesca Uvero", "table": "6"}, {"name": "Denise Sophia Maxime Miguel", "table": "19"}, {"name": "Diane Jane Alejano", "table": "19"}, {"name": "Djon Cruz", "table": "20"}, {"name": "Dominga Lilibeth Collante", "table": "1"}, {"name": "Edith Santos", "table": "VIP A"}, {"name": "Edmar Sultan", "table": "1"}, {"name": "Erica Collante", "table": "3"}, {"name": "Erickson Maddela", "table": "17"}, {"name": "Erin Julia Fernandez", "table": "5"}, {"name": "Erlando Collante", "table": "1"}, {"name": "Erlinda Collante", "table": "1"}, {"name": "Erlinda Santos", "table": "VIP A"}, {"name": "Eunice Miña", "table": "19"}, {"name": "Evangeline Fernandez", "table": "5"}, {"name": "Evelyn Songco", "table": "12"}, {"name": "Faye Liong", "table": "15"}, {"name": "Fr. Joaquin Jose Mari Sumpaico", "table": "VIP B"}, {"name": "Fr. Richard Ang OP", "table": "VIP B"}, {"name": "Francois Xavier Bonnet", "table": "VIP B"}, {"name": "Gadlie Baquiran", "table": "18"}, {"name": "Genalyn Sanvictores", "table": "13"}, {"name": "Gene Lawrence Borja", "table": "4"}, {"name": "Gerard Noel Fernandez", "table": "16"}, {"name": "Gessie Alethea Krishnan", "table": "17"}, {"name": "Gian Angeles", "table": "8"}, {"name": "Godwin Mariano", "table": "10"}, {"name": "Hannah Gramaje", "table": "11"}, {"name": "Irineo Hernandez", "table": "18"}, {"name": "Jacel Robby Eugenio", "table": "1"}, {"name": "Jairus Candelaria", "table": "2"}, {"name": "Jasmine Bliss Valencia", "table": "15"}, {"name": "Jean Candelaria", "table": "VIP A"}, {"name": "Jean Kathleen Borja", "table": "4"}, {"name": "Jemima Moral", "table": "10"}, {"name": "Jennifer Alcoriza", "table": "VIP B"}, {"name": "Jochelle Cruz", "table": "20"}, {"name": "John Simon", "table": "VIP A"}, {"name": "Joselito Enclona", "table": "VIP B"}, {"name": "Joselito Gallardo", "table": "17"}, {"name": "Joselito Hernandez", "table": "VIP A"}, {"name": "Joseph Cortez", "table": "8"}, {"name": "Joseph Simon", "table": "14"}, {"name": "Josielyn Enclona", "table": "VIP B"}, {"name": "Juan Andres Uvero", "table": "6"}, {"name": "Judith Ma. Angelica Claustro", "table": "19"}, {"name": "Juliane May  Crisostomo-Valencia", "table": "15"}, {"name": "Justin Gramaje", "table": "11"}, {"name": "Katherine Cigaral", "table": "6"}, {"name": "Katherine Patrice Sibug", "table": "12"}, {"name": "Katrina Bartolome", "table": "20"}, {"name": "Kayle Andrew Castro", "table": "16"}, {"name": "Kiko Perez", "table": "9"}, {"name": "Kiko Uvero", "table": "4"}, {"name": "Kjersti Sitchon", "table": "8"}, {"name": "Kristel Rose Alcazar", "table": "14"}, {"name": "Kristine Faye  Ortiz-Umengan", "table": "8"}, {"name": "Leah Marie Bautista", "table": "15"}, {"name": "Lito Villanueva", "table": "9"}, {"name": "Lloyd Evangelista", "table": "16"}, {"name": "Lorraine Gonzales", "table": "2"}, {"name": "Ma. Cristina Reyes", "table": "5"}, {"name": "Ma. Fay Inez Chingcuangco", "table": "VIP A"}, {"name": "Ma. Liza Hernandez", "table": "14"}, {"name": "Ma. Lourdes Posadas", "table": "VIP A"}, {"name": "Ma. Regina Arriero", "table": "19"}, {"name": "Manuel Joseph Delos Reyes", "table": "11"}, {"name": "Marc Sean Hernandez", "table": "3"}, {"name": "Marden Vasquez", "table": "6"}, {"name": "Marilou Nadal Palma", "table": "3"}, {"name": "Marites Veloso", "table": "13"}, {"name": "Marjun Manahan", "table": "2"}, {"name": "Mark Bachao", "table": "8"}, {"name": "Mark Quinol", "table": "17"}, {"name": "Markkie Aribon", "table": "13"}, {"name": "Marvi Krisly Reyes", "table": "20"}, {"name": "Marvin Rellamas", "table": "18"}, {"name": "Mary Anthony Sieras", "table": "13"}, {"name": "Mayumi Elise Reyes", "table": "5"}, {"name": "Medelyn Candelaria Mejino", "table": "7"}, {"name": "Melfi Caranto", "table": "14"}, {"name": "Menandro Fernandez", "table": "5"}, {"name": "Michael Jorge Peralta", "table": "12"}, {"name": "Michael Santos", "table": "VIP A"}, {"name": "Michaella Lagniton", "table": "12"}, {"name": "Miguel Luis Valdes", "table": "11"}, {"name": "Minda  Candelaria-Cortez", "table": "7"}, {"name": "Mon Hernandez", "table": "14"}, {"name": "Myla Santos", "table": "9"}, {"name": "Naesreen Al Fardy", "table": "19"}, {"name": "Natasha Belle De Gala", "table": "20"}, {"name": "Nestor Ong", "table": "12"}, {"name": "Niño Hidalgo", "table": "3"}, {"name": "Noryanne Mendoza", "table": "20"}, {"name": "Norylynn Villanueva", "table": "9"}, {"name": "Olivia Israel", "table": "VIP A"}, {"name": "Pacifico Merjan III", "table": "11"}, {"name": "Paola Jane Castro", "table": "16"}, {"name": "Papey / Rafael Ambrosio", "table": "10"}, {"name": "Paquita Bonnet", "table": "VIP B"}, {"name": "Pat Constantino", "table": "10"}, {"name": "Pat Severino Morales", "table": "15"}, {"name": "Patet Candelaria", "table": "7"}, {"name": "Patricia Faelmoca", "table": "9"}, {"name": "Paul Daniel Panaga", "table": "18"}, {"name": "Paul Erlan Collante", "table": "3"}, {"name": "Pia Josefina Posadas", "table": "3"}, {"name": "Pilar Romero", "table": "12"}, {"name": "Pingko Aguilar", "table": "4"}, {"name": "Precious Collante", "table": "1"}, {"name": "Rachelle Angeles", "table": "8"}, {"name": "Ramille Raymundo", "table": "10"}, {"name": "Ramon Posadas", "table": "VIP A"}, {"name": "Rebecca Maya", "table": "17"}, {"name": "Renz Christian Argao", "table": "16"}, {"name": "Rodelio Mejino", "table": "7"}, {"name": "Rommel Cruz", "table": "14"}, {"name": "Rommel Rivera", "table": "VIP B"}, {"name": "Ronel Candelaria", "table": "7"}, {"name": "Ronney Micua", "table": "17"}, {"name": "Rosecheele Aurelio", "table": "8"}, {"name": "Ruth Ann Mercado", "table": "13"}, {"name": "Samuel Aguilar", "table": "VIP A"}, {"name": "Sherwin Layoso", "table": "17"}, {"name": "Sheryll Uvero", "table": "6"}, {"name": "Skilty Labastilla", "table": "13"}, {"name": "Thelma Angeles", "table": "VIP B"}, {"name": "Timothy Joshua Hernandez", "table": "1"}, {"name": "Trisha Candelaria", "table": "7"}, {"name": "Trisha Florendo", "table": "4"}, {"name": "Ulysses Te", "table": "10"}, {"name": "Veronico Tarrayo", "table": "19"}, {"name": "Vien Vic Flores", "table": "16"}, {"name": "Wielson Factolerin", "table": "13"}, {"name": "Yannah Despi", "table": "4"}, {"name": "Yuan Red Villanueva", "table": "9"}, {"name": "Zeus Candelaria", "table": "2"}];function f(){let q=document.getElementById('q').value.toLowerCase().trim(),r=document.getElementById('r');if(!q){r.innerHTML='';return;}let m=g.filter(x=>x.name.toLowerCase().includes(q));r.innerHTML=m.length?m.map(x=>'<div class=item><b>'+x.name+'</b><br>Table Number: <b>'+x.table+'</b></div>').join(''):'<div class=item>Name not found.</div>';}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coleen & Philippe | Find Your Seat</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --rose: #f7d9d8;
+  --blush: #fff4f2;
+  --coral: #d98b7f;
+  --rust: #a94816;
+  --sage: #9fb9ad;
+  --deep: #4b2a20;
+  --cream: #fffaf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(247, 217, 216, 0.95), transparent 34%),
+    radial-gradient(circle at top right, rgba(159, 185, 173, 0.35), transparent 28%),
+    linear-gradient(180deg, var(--blush), var(--cream));
+  color: var(--deep);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 250, 247, 0.92);
+  border: 1px solid rgba(169, 72, 22, 0.16);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 18px 50px rgba(75, 42, 32, 0.12);
+  text-align: center;
+}
+
+.logo {
+  width: min(100%, 520px);
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(48px, 10vw, 86px);
+  color: var(--rust);
+  line-height: 0.95;
+  margin: 6px 0 4px;
+  font-weight: 400;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sage);
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 12px 0 8px;
+}
+
+p {
+  margin: 0 0 22px;
+  color: #6c4a40;
+}
+
+.search-wrap {
+  display: flex;
+  gap: 10px;
+  margin: 20px auto 10px;
+  max-width: 620px;
+}
+
+input {
+  flex: 1;
+  padding: 16px 18px;
+  border: 1px solid rgba(169, 72, 22, 0.25);
+  border-radius: 16px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+
+input:focus {
+  border-color: var(--rust);
+  box-shadow: 0 0 0 4px rgba(169, 72, 22, 0.08);
+}
+
+button {
+  border: 0;
+  border-radius: 16px;
+  padding: 16px 24px;
+  background: var(--rust);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.result {
+  max-width: 620px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+
+.guest {
+  background: white;
+  border: 1px solid rgba(159, 185, 173, 0.45);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 22px rgba(75, 42, 32, 0.07);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.table {
+  font-size: 17px;
+}
+
+.table span {
+  color: var(--rust);
+  font-weight: 800;
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 18px;
+  color: #8d6c63;
+}
+
+.no-result {
+  text-align: center;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(247, 217, 216, 0.45);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+  }
+  .card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+  .search-wrap {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+      <img class="logo" src="invitation.png" alt="Coleen and Philippe wedding illustration">
+
+      <div class="script">Find Your Seat</div>
+      <div class="subtitle">Coleen & Philippe Wedding</div>
+
+      <h2>Welcome, dear guest</h2>
+      <p>Type your name below to find your assigned table.</p>
+
+      <div class="search-wrap">
+        <input id="name" placeholder="Enter your name" autocomplete="off" oninput="findSeat()">
+        <button onclick="findSeat()">Search</button>
+      </div>
+
+      <div id="result" class="result"></div>
+
+      <div class="note">Tip: You may search using your first name or last name.</div>
+    </section>
+  </main>
+
+<script>
+const guests = [{"name": "Aaron Jay Morales", "table": "15"}, {"name": "Aaron John Fernandez", "table": "5"}, {"name": "Ace Candelaria", "table": "18"}, {"name": "Ady Mejino", "table": "7"}, {"name": "Agatha Uvero", "table": "6"}, {"name": "Aiko Morales", "table": "15"}, {"name": "Aileen Palma", "table": "3"}, {"name": "Alex Castro", "table": "6"}, {"name": "Allan Theo Hernandez", "table": "18"}, {"name": "Althea Jean Sultan", "table": "1"}, {"name": "Alyah Florendo", "table": "4"}, {"name": "Ana Patricia Bautista", "table": "11"}, {"name": "Andreah Despi", "table": "4"}, {"name": "Andrew James Despi", "table": "4"}, {"name": "Andrew Lagumbay", "table": "11"}, {"name": "Angela Fernandez", "table": "5"}, {"name": "Anne Margaret Layson", "table": "9"}, {"name": "Anne Vera Candelaria", "table": "2"}, {"name": "Arabella Denise Palma", "table": "3"}, {"name": "Armando  Israel", "table": "VIP A"}, {"name": "Arnel Alcoriza", "table": "VIP B"}, {"name": "Arnold Austria", "table": "17"}, {"name": "Ashton Uvero", "table": "6"}, {"name": "Badette Dasian", "table": "20"}, {"name": "Basil John Valencia", "table": "15"}, {"name": "Benjamin Fortus", "table": "18"}, {"name": "Bibim / Jaime Cortez", "table": "8"}, {"name": "Camille Espinar", "table": "2"}, {"name": "Camille Sy", "table": "16"}, {"name": "Carlos Arriero", "table": "19"}, {"name": "Cheryl Peralta", "table": "12"}, {"name": "Christopher John Faelmoca", "table": "9"}, {"name": "Cian Marcelo", "table": "18"}, {"name": "Claire Azcarraga", "table": "11"}, {"name": "Clarita Carillo", "table": "VIP B"}, {"name": "Cocoy Cortez", "table": "7"}, {"name": "Dan Michael Sy", "table": "16"}, {"name": "Danielle Chingcuangco", "table": "14"}, {"name": "Daryll Francesca Uvero", "table": "6"}, {"name": "Denise Sophia Maxime Miguel", "table": "19"}, {"name": "Diane Jane Alejano", "table": "19"}, {"name": "Djon Cruz", "table": "20"}, {"name": "Dominga Lilibeth Collante", "table": "1"}, {"name": "Edith Santos", "table": "VIP A"}, {"name": "Edmar Sultan", "table": "1"}, {"name": "Erica Collante", "table": "3"}, {"name": "Erickson Maddela", "table": "17"}, {"name": "Erin Julia Fernandez", "table": "5"}, {"name": "Erlando Collante", "table": "1"}, {"name": "Erlinda Collante", "table": "1"}, {"name": "Erlinda Santos", "table": "VIP A"}, {"name": "Eunice Miña", "table": "19"}, {"name": "Evangeline Fernandez", "table": "5"}, {"name": "Evelyn Songco", "table": "12"}, {"name": "Faye Liong", "table": "15"}, {"name": "Fr. Joaquin Jose Mari Sumpaico", "table": "VIP B"}, {"name": "Fr. Richard Ang OP", "table": "VIP B"}, {"name": "Francois Xavier Bonnet", "table": "VIP B"}, {"name": "Gadlie Baquiran", "table": "18"}, {"name": "Genalyn Sanvictores", "table": "13"}, {"name": "Gene Lawrence Borja", "table": "4"}, {"name": "Gerard Noel Fernandez", "table": "16"}, {"name": "Gessie Alethea Krishnan", "table": "17"}, {"name": "Gian Angeles", "table": "8"}, {"name": "Godwin Mariano", "table": "10"}, {"name": "Hannah Gramaje", "table": "11"}, {"name": "Irineo Hernandez", "table": "18"}, {"name": "Jacel Robby Eugenio", "table": "1"}, {"name": "Jairus Candelaria", "table": "2"}, {"name": "Jasmine Bliss Valencia", "table": "15"}, {"name": "Jean Candelaria", "table": "VIP A"}, {"name": "Jean Kathleen Borja", "table": "4"}, {"name": "Jemima Moral", "table": "10"}, {"name": "Jennifer Alcoriza", "table": "VIP B"}, {"name": "Jochelle Cruz", "table": "20"}, {"name": "John Simon", "table": "VIP A"}, {"name": "Joselito Enclona", "table": "VIP B"}, {"name": "Joselito Gallardo", "table": "17"}, {"name": "Joselito Hernandez", "table": "VIP A"}, {"name": "Joseph Cortez", "table": "8"}, {"name": "Joseph Simon", "table": "14"}, {"name": "Josielyn Enclona", "table": "VIP B"}, {"name": "Juan Andres Uvero", "table": "6"}, {"name": "Judith Ma. Angelica Claustro", "table": "19"}, {"name": "Juliane May  Crisostomo-Valencia", "table": "15"}, {"name": "Justin Gramaje", "table": "11"}, {"name": "Katherine Cigaral", "table": "6"}, {"name": "Katherine Patrice Sibug", "table": "12"}, {"name": "Katrina Bartolome", "table": "20"}, {"name": "Kayle Andrew Castro", "table": "16"}, {"name": "Kiko Perez", "table": "9"}, {"name": "Kiko Uvero", "table": "4"}, {"name": "Kjersti Sitchon", "table": "8"}, {"name": "Kristel Rose Alcazar", "table": "14"}, {"name": "Kristine Faye  Ortiz-Umengan", "table": "8"}, {"name": "Leah Marie Bautista", "table": "15"}, {"name": "Lito Villanueva", "table": "9"}, {"name": "Lloyd Evangelista", "table": "16"}, {"name": "Lorraine Gonzales", "table": "2"}, {"name": "Ma. Cristina Reyes", "table": "5"}, {"name": "Ma. Fay Inez Chingcuangco", "table": "VIP A"}, {"name": "Ma. Liza Hernandez", "table": "14"}, {"name": "Ma. Lourdes Posadas", "table": "VIP A"}, {"name": "Ma. Regina Arriero", "table": "19"}, {"name": "Manuel Joseph Delos Reyes", "table": "11"}, {"name": "Marc Sean Hernandez", "table": "3"}, {"name": "Marden Vasquez", "table": "6"}, {"name": "Marilou Nadal Palma", "table": "3"}, {"name": "Marites Veloso", "table": "13"}, {"name": "Marjun Manahan", "table": "2"}, {"name": "Mark Bachao", "table": "8"}, {"name": "Mark Quinol", "table": "17"}, {"name": "Markkie Aribon", "table": "13"}, {"name": "Marvi Krisly Reyes", "table": "20"}, {"name": "Marvin Rellamas", "table": "18"}, {"name": "Mary Anthony Sieras", "table": "13"}, {"name": "Mayumi Elise Reyes", "table": "5"}, {"name": "Medelyn Candelaria Mejino", "table": "7"}, {"name": "Melfi Caranto", "table": "14"}, {"name": "Menandro Fernandez", "table": "5"}, {"name": "Michael Jorge Peralta", "table": "12"}, {"name": "Michael Santos", "table": "VIP A"}, {"name": "Michaella Lagniton", "table": "12"}, {"name": "Miguel Luis Valdes", "table": "11"}, {"name": "Minda  Candelaria-Cortez", "table": "7"}, {"name": "Mon Hernandez", "table": "14"}, {"name": "Myla Santos", "table": "9"}, {"name": "Naesreen Al Fardy", "table": "19"}, {"name": "Natasha Belle De Gala", "table": "20"}, {"name": "Nestor Ong", "table": "12"}, {"name": "Niño Hidalgo", "table": "3"}, {"name": "Noryanne Mendoza", "table": "20"}, {"name": "Norylynn Villanueva", "table": "9"}, {"name": "Olivia Israel", "table": "VIP A"}, {"name": "Pacifico Merjan III", "table": "11"}, {"name": "Paola Jane Castro", "table": "16"}, {"name": "Papey / Rafael Ambrosio", "table": "10"}, {"name": "Paquita Bonnet", "table": "VIP B"}, {"name": "Pat Constantino", "table": "10"}, {"name": "Pat Severino Morales", "table": "15"}, {"name": "Patet Candelaria", "table": "7"}, {"name": "Patricia Faelmoca", "table": "9"}, {"name": "Paul Daniel Panaga", "table": "18"}, {"name": "Paul Erlan Collante", "table": "3"}, {"name": "Pia Josefina Posadas", "table": "3"}, {"name": "Pilar Romero", "table": "12"}, {"name": "Pingko Aguilar", "table": "4"}, {"name": "Precious Collante", "table": "1"}, {"name": "Rachelle Angeles", "table": "8"}, {"name": "Ramille Raymundo", "table": "10"}, {"name": "Ramon Posadas", "table": "VIP A"}, {"name": "Rebecca Maya", "table": "17"}, {"name": "Renz Christian Argao", "table": "16"}, {"name": "Rodelio Mejino", "table": "7"}, {"name": "Rommel Cruz", "table": "14"}, {"name": "Rommel Rivera", "table": "VIP B"}, {"name": "Ronel Candelaria", "table": "7"}, {"name": "Ronney Micua", "table": "17"}, {"name": "Rosecheele Aurelio", "table": "8"}, {"name": "Ruth Ann Mercado", "table": "13"}, {"name": "Samuel Aguilar", "table": "VIP A"}, {"name": "Sherwin Layoso", "table": "17"}, {"name": "Sheryll Uvero", "table": "6"}, {"name": "Skilty Labastilla", "table": "13"}, {"name": "Thelma Angeles", "table": "VIP B"}, {"name": "Timothy Joshua Hernandez", "table": "1"}, {"name": "Trisha Candelaria", "table": "7"}, {"name": "Trisha Florendo", "table": "4"}, {"name": "Ulysses Te", "table": "10"}, {"name": "Veronico Tarrayo", "table": "19"}, {"name": "Vien Vic Flores", "table": "16"}, {"name": "Wielson Factolerin", "table": "13"}, {"name": "Yannah Despi", "table": "4"}, {"name": "Yuan Red Villanueva", "table": "9"}, {"name": "Zeus Candelaria", "table": "2"}];
+
+function findSeat() {
+  const q = document.getElementById('name').value.trim().toLowerCase();
+  const r = document.getElementById('result');
+
+  if (!q) {
+    r.innerHTML = '';
+    return;
+  }
+
+  const matches = guests.filter(g => g.name.toLowerCase().includes(q));
+
+  if (matches.length === 0) {
+    r.innerHTML = '<div class="no-result">Name not found. Please check the spelling or ask the registration team.</div>';
+    return;
+  }
+
+  r.innerHTML = matches.map(m => `
+    <div class="guest">
+      <div class="name">${m.name}</div>
+      <div class="table">Table Number: <span>${m.table}</span></div>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>
